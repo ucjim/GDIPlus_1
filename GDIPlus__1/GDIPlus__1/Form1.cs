@@ -20,15 +20,13 @@ namespace GDIPlus__1
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Pen bluepen = new Pen(Color.Blue, 2);
-            g.DrawRectangle(bluepen, 10, 10, 100, 100);
-            bluepen.Dispose();
-            Pen somepen = new Pen(Color.FromArgb(255, 120, 200));
-            g.DrawEllipse(somepen, 20, 20, 200, 200);
-            somepen.Dispose();
+            Pen mypen = new Pen(Color.Black, 1);
+            g.DrawRectangle(mypen, 10, 10, 100, 100);
+            mypen.Width = 4;
+            mypen.Color = Color.Pink;
+            g.DrawRectangle(mypen, 10, 10, 100, 100);
+            mypen.Dispose();
 
-            Color col = Color.FromName("LughtGreen");
-            this.BackColor = col;
 
 
         }
