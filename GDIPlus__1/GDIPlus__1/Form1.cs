@@ -21,6 +21,7 @@ namespace GDIPlus__1
         {
             Graphics g = e.Graphics;
             Pen mypen = new Pen(Color.Black, 1);
+            mypen.DashStyle = DashStyle.Dash;
             g.DrawRectangle(mypen, 10, 10, 100, 100);
             mypen.Width = 4;
             mypen.Color = Color.Pink;
